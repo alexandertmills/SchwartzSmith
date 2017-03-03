@@ -12,13 +12,13 @@ public class ClientEntryPoint {
     private CrossComClient client;
 
 	public ClientEntryPoint(String address, int port) {
-        System.out.println("Attempting to conenct to KUKAVARPROXY...");
+        System.out.println("Attempting to connect to KUKAVARPROXY...");
         try {
             client = new CrossComClient(address, port);
-            System.out.format("Started client on %s:%d", address, port);
+            System.out.format("Started client on %s:%d\n", address, port);
         } catch (IOException ex) {
             System.out.println(ex);
-            System.out.println("Terminating..");
+            System.out.println("Terminating...");
             System.exit(1);
         }
 	}
